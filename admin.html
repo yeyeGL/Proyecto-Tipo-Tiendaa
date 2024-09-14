@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - HarborShop</title>
+    <link rel="shortcut icon" href="img/icono.svg" type="image/x-icon">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js">
+    </script>
+    <link rel="stylesheet" href="css/estilospp.css">
+    <script src="js/adminproductos.js" defer></script>
+
+</head>
+
+<body>
+    <header>
+        <!--Inicio del menu-->
+        <nav class="navbar navbar-expand-md sticky-top">
+            <div class="container">
+                <!--ICONO-->
+                <a class="navbar-brand" href="index.html">
+                    <img src="img/icono.svg" alt="" style="height: 50px;">
+                    <span class="text-warning">HarborShop</span>
+                </a>
+
+                <!--BOTON MENU-->
+                <button class="navbar-toggler boton-menu" type="button" data-toggle="collapse" data-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!--ELEMENTOS DEL MENU-->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <!--LADO IZQUIERDO-->
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Inicio</a>
+                        </li>
+                        <!--MENU DESPLEGABLE-->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="categoriasDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Productos
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="categoriasDropdown">
+                                <a class="dropdown-item" href="eletronica.html">Electrónica</a>
+                                <a class="dropdown-item" href="deportes.html">Deporte</a>
+                                <a class="dropdown-item" href="hogar.html">Hogar</a>
+                                <a class="dropdown-item" href="computadores.html">Computadores y tablets</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="ofertas.html">Ofertas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contacto.html">Contacto</a>
+                        </li>
+                    </ul>
+
+                    <!--LADO DERECHO-->
+                    <ul class="navbar-nav ml-auto" style="align-items: baseline;">
+                        <li class="nav-item" style="padding: 10px;">
+                            <input class="form-control mr-sm-2" type="search" placeholder="Buscar productos"
+                                style="height: 35px;">
+                        </li>
+                        <li class="nav-item" style="padding-right: 20px;">
+                            <a href="cart.html"><i class="bi bi-cart" style="font-size: 25px; color: white;"><span
+                                        id="cuenta-carrito">0</span></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="InicioSesion.html"><i class="bi bi-person-circle"
+                                    style="font-size: 30px; color: white;"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!--CUERPO PAGINA-->
+    <main>
+        <div class="container-flex">
+            <div class="p-5 mb-4 bg-body-tertiary" style="background-color: rgb(255, 145, 0) !important;">
+                <div class="container-fluid py-5">
+                    <h1 class="display-5 fw-bold">REGISTRAR PRODUCTOS</h1>
+                    <p class="col-md-8 fs-4">Llena a continuación los siguientes campos para poder visualizar más abajo
+                        en la tabla los productos que has subido.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            
+                <form id="formulario" class="formulario">
+                    <h1>Llenar datos de producto</h1>
+                    <div class="row">
+                        <div class="col-10">
+                            <label for="id">ID producto</label>
+                            <input  class="form-control" type="text" placeholder="ID del producto" name="id" id="id" required />
+                            <p id="error-message_id" style="padding: 0%; font-size: 15px; text-align: left; display: none;">Solo se permite numeros</p>
+                        </div>
+                        <div class="col-2 icono2">
+                            <i class="bi bi-circle-fill" style="display: block;" id="estado_id"></i>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-10">
+                            <label for="descripcion">Descripción producto</label>
+                            <input  class="form-control" type="text" placeholder="Descripcion del producto" name="descripcion" id="descripcion" required />
+                            <p id="error-message_descripcion" style="padding: 0%; font-size: 15px; text-align: left; display: none;">Solo se permite letras, espacios y acentos</p>
+                        </div>
+                        <div class="col-2 icono2">
+                            <i class="bi bi-circle-fill" style="display: block;" id="estado_descripcion"></i>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-10">
+                            <label for="categoria">Categoria</label>
+                            <select name="categoria" id="categoria" placeholder="Categoria" class="form-control">
+                                <option value="Electrónica">Electronica</option>
+                                <option value="Deporte">Deporte</option>
+                                <option value="Hogar">Hogar</option>
+                                <option value="Cmputadores y tablets">Computadores y tablets</option>
+                            </select>
+                            <p id="error-message_categoria" style="padding: 0%; font-size: 15px; text-align: left; display: none;">Solo se permite letras, espacios y acentos</p>
+                        </div>
+                        <div class="col-2 icono2">
+                            <i class="bi bi-circle-fill" style="display: block;" id="estado_categoria"></i>
+                        </div>
+                        
+                    </div>
+                    <div class="row">
+                        <div class="col-4">
+                            <label for="cantidad">Cantidad</label>
+                            <input  class="form-control" type="number" placeholder="Ingrese cantidad en stock" name="cantidad" id="cantidad" required />
+                            <p id="error-message_cantidad" style="padding: 0%; font-size: 15px; text-align: left; display: none;">Solo se permite numeros</p>
+                        </div>
+                        <div class="col-2 icono2">
+                            <i class="bi bi-circle-fill" style="display: block;" id="estado_cantidad"></i>
+                        </div>
+                        <div class="col-4">
+                            <label for="valor">Valor Unitario</label>
+                            <input  class="form-control" type="number" placeholder="Valor del producto" name="valor" id="valor" required />
+                            <p id="error-message_valor" style="padding: 0%; font-size: 15px; text-align: left;">Solo se permite numeros</p>
+                        </div>
+                        <div class="col-2 icono2">
+                            <i class="bi bi-circle-fill" style="display: block;" id="estado_valor"></i>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-10">
+                            <label for="fecha">Fecha de ingreso</label>
+                            <input type="date" name="fecha" placeholder="Fecha en que llegó el producto" class="form-control" id="fecha">
+                        </div>
+                        <div class="col-2 icono2">
+                            <i class="bi bi-circle-fill" style="display: block;" id="estado_fecha"></i>
+                        </div>
+                    </div>
+                    <br><br>
+                    
+                    <button type="submit" class="btn btn-warning">AGREGAR</button>
+                    <p id="error-message_form" style="font-size: 20px; text-align: left; display: none;">Error en el
+                        registro</p>
+                    <br><br><br>
+                </form>
+            
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">Descripción</th>
+                            <th scope="col">Categoría</th>
+                            <th scope="col">Cantidad</th>
+                            <th scope="col">Valor Unitario</th>
+                            <th scope="col">Fecha Ingeso</th>
+                        </tr>
+                    </thead>
+                    <tbody id="productos-container">
+                        <tr>
+                            
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <!--PIE DE PAGINA-->
+    <footer>
+        <div class="container-flex piePagina">
+            <br><br><br>
+            <p class="text-center textoPie">&copy; 2023 ShopHarbor. Todos los derechos reservados.</p>
+            <br>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

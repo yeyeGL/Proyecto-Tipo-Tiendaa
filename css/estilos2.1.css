@@ -1,0 +1,17 @@
+#valida-nombre{
+    border-color: black;
+    background-color: blue;
+}
+
+.icono{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icono2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
