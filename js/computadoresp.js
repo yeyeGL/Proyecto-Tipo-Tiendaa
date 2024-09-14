@@ -11,30 +11,24 @@ const elementos = [
     },
     {
         id: 2,
-        nombre: "Ideapad 5",
-        img: "img/ProductosCompTablets/ideapad-5.png",
-        precio: 3200000
-    },
-    {
-        id: 3,
         nombre: "Tablet Samsung",
         img: "img/ProductosCompTablets/tabletsamsung.png",
         precio: 1000000
     },
     {
-        id: 4,
+        id: 3,
         nombre: "Computador Gaming",
         img: "img/ProductosCompTablets/compugaming.png",
         precio: 1200000
     },
     {
-        id: 5,
+        id: 4,
         nombre: "Portatil Apple",
         img: "img/ProductosCompTablets/portatilapple.png",
         precio: 2400000
     },
     {
-        id: 6,
+        id: 5,
         nombre: "Tablet Huawei",
         img: "img/ProductosCompTablets/tablethuawei.png",
         precio: 300000

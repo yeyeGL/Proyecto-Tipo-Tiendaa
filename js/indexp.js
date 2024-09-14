@@ -10,115 +10,109 @@ const elementos = [
     },
     {
         id: 2,
-        nombre: "Ideapad 5",
-        img: "img/ProductosCompTablets/ideapad-5.png",
-        precio: 3200000
-    },
-    {
-        id: 3,
         nombre: "Tablet Samsung",
         img: "img/ProductosCompTablets/tabletsamsung.png",
         precio: 1000000
     },
     {
-        id: 4,
+        id: 3,
         nombre: "Computador Gaming",
         img: "img/ProductosCompTablets/compugaming.png",
         precio: 1200000
     },
     {
-        id: 5,
+        id: 4,
         nombre: "Portatil Apple",
         img: "img/ProductosCompTablets/portatilapple.png",
         precio: 2400000
     },
     {
-        id: 6,
+        id: 5,
         nombre: "Tablet Huawei",
         img: "img/ProductosCompTablets/tablethuawei.png",
         precio: 300000
     },
     {
-        id: 7,
+        id: 6,
         nombre: "Lampara de noche",
         img: "img/ProductosHogar/lampara-de-mesa.png",
         precio: 70000
     },
     {
-        id: 8,
+        id: 7,
         nombre: "Silla puff",
         img: "img/ProductosHogar/puff.png",
         precio: 120000
     },
     {
-        id: 9,
+        id: 8,
         nombre: "Reloj de pared",
         img: "img/ProductosHogar/reloj-pared.png",
         precio: 100000
     },
     {
-        id: 10,
+        id: 9,
         nombre: "Silla reclinable",
         img: "img/ProductosHogar/silla.png",
         precio: 100000
     },
      
     {
-        id: 11,
+        id: 10,
         nombre: "Airpods Pro",
         img: "img/ProductosElectronica/airpods-pro.png",
         precio: 1900000
     },
     {
-        id: 12,
+        id: 11,
         nombre: "Pack Estuches Samsung",
         img: "img/ProductosElectronica/Estuchegalaxy.png",
         precio: 500000
     },
     {
-        id: 13,
+        id: 12,
         nombre: "Blackberry",
         img: "img/ProductosElectronica/piedra.png",
         precio: 7000000
     },
     {
-        id: 14,
+        id: 13,
         nombre: "Xiaomi 10",
         img: "img/ProductosElectronica/xioami-10.png",
         precio: 230000
     },
     {
-        id: 15,
+        id: 14,
         nombre: "Diademas Sony",
         img: "img/ProductosElectronica/sonyaudifonos.jpeg",
         precio: 450000
     },
     {
-        id: 16,
+        id: 15,
         nombre: "Balón de baloncesto",
         img: "img/ProductosDeportes/balon-baloncesto-oficial.png",
         precio: 30000
     },
     {
-        id: 17,
+        id: 16,
         nombre: "Balón de futbol",
         img: "img/ProductosDeportes/balon-futbol.png",
         precio: 20000
     },
     {
-        id: 18,
+        id: 17,
         nombre: "Camiseta de Messi",
         img: "img/ProductosDeportes/camisathegoat.png",
         precio: 1000000
     },
     {
-        id: 19,
+        id: 18,
         nombre: "Raqueta de Tenis de Mesa",
         img: "img/ProductosDeportes/raqueta-ping-pong.png",
         precio: 125000
     },
     {
-        id: 20,
+        id: 19,
         nombre: "Cuerda de saltar",
         img: "img/ProductosDeportes/cuerda-saltar.png",
         precio: 12000
